@@ -1,0 +1,23 @@
+#map {
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+
+}
+
+.geo {
+  grid-area: geo;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 2%;
+}
+
+.geo__loc {
+  margin-right: 4%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 1.5rem;
+  line-height: 30px;
+}

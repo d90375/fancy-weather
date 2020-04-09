@@ -1,0 +1,65 @@
+.weatherPerThree {
+  grid-area: weatherPerThree;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+}
+
+.weatherPerThree_day {
+  display: grid;
+  grid-template:
+    'temperature day' 2fr
+    'temperature iconn' 3fr / 3fr 6fr;
+  &:first-child {
+    padding-left: 3%;
+  }
+  @media (max-width: $tablet) {
+    &:first-child {
+      margin-top: 1%;
+    }
+    margin-bottom: 1%;
+  }
+}
+
+.weatherPerThree__week {
+  grid-column: 1/3;
+}
+
+.weatherPerThree__icon img {
+  max-width: 25%;
+}
+
+.weatherPerThree__canvas {
+  width: 150px;
+}
+
+.weatherPerThree__icon {
+  grid-area: iconn;
+  align-self: center;
+}
+
+.weatherPerThree__week {
+  grid-area: day;
+  justify-self: flex-start;
+  align-self: center;
+  font-size: 1.5rem;
+  @media (max-width: $mobile) {
+    font-size: 1rem;
+  }
+}
+
+.weatherPerThree__temperature {
+  grid-area: temperature;
+  font-size: 3rem;
+  justify-self: flex-end;
+  align-self: center;
+  @media (max-width: $mobile) {
+    font-size: 2rem;
+  }
+}

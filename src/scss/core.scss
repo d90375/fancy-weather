@@ -1,0 +1,53 @@
+html {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  //overflow-wrap: break-word;
+  //word-wrap: break-word;
+  //overflow-x: hidden;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+
+.wrap {
+  @include min-max(320px, 1440px, 0);
+  opacity: 0;
+  display: grid;
+  padding: 2%;
+  grid-template:
+    'control control' 70px
+    'weatherPerDay geo' auto
+    'weatherPerThree geo' 24% / auto 400px;
+  grid-column-gap: 2%;
+  grid-row-gap: 2%;
+
+  @media (max-width: 1135px) {
+    grid-template:
+      'control' 150px
+      'weatherPerDay' auto
+      'weatherPerThree' auto
+      'geo' auto/auto;
+    grid-column-gap: 1%;
+    grid-row-gap: 1%;
+  }
+  @media (max-width: $laptop) {
+    grid-row-gap: 0.6%;
+  }
+  @media (max-width: $mobile) {
+    grid-row-gap: 0.3%;
+    grid-template:
+      'control' 120px
+      'weatherPerDay' auto
+      'weatherPerThree' auto
+      'geo' auto/auto;
+  }
+
+  &.done {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,130 @@
+.weatherPerDay {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  grid-area: weatherPerDay;
+}
+
+.weatherPerDay__wrapLoc {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin-bottom: 2%;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  position: relative;
+  padding: 1% 3%;
+}
+
+.weatherPerDay__wrapWeather {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: wrap row;
+  padding: 1% 3%;
+  min-height: 323px;
+}
+
+.weatherPerDay__icon {
+  grid-area: iconn;
+}
+
+.weatherPerDay__temperature {
+}
+
+.weatherPerDay__temperature-container {
+  font-size: 15rem;
+  grid-area: temperature;
+  display: flex;
+  min-width: 36%;
+  @media (max-width: 1250px) {
+    font-size: 13rem;
+  }
+  @media (max-width: 1150px) {
+    font-size: 11rem;
+    min-width: 25%;
+  }
+  @media (max-width: $laptop) {
+    font-size: 10rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 8rem;
+  }
+}
+
+.weatherPerDay__canvas {
+  width: 100%;
+}
+
+.weatherPerDay__apparent2-container {
+  display: inline;
+}
+
+.weatherPerDay__icon {
+}
+
+.weatherPerDay__summary span {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  @media (max-width: $mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+.weatherPerDay__summary {
+  justify-self: flex-end;
+  grid-area: summary;
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  min-width: 167px;
+}
+
+.weatherPerDay__summary * {
+  padding-bottom: 5%;
+}
+.weatherPerDay__timezone {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 1.5rem;
+  }
+}
+.weatherPerDay__date {
+  font-size: 2rem;
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: $mobile) {
+    font-size: 1.3rem;
+  }
+}
+
+.weatherPerDay__wrapDate {
+  display: flex;
+  flex-direction: column;
+}
+
+.weatherPerDay__clock {
+  font-size: 2rem;
+  @media (max-width: $mobile) {
+    font-size: 1rem;
+  }
+}
+
+.weatherPerDay__icon img {
+  max-width: 30%;
+}
+
+.weatherPerDay__error {
+  display: none;
+  &.display {
+    @include error();
+  }
+}
